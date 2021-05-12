@@ -14,9 +14,9 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://download.c.realme.com/osupdate/RMX1901EX_11_OTA_1040_all_BbUuFdfQYcIr.ozip
-  ROM_NAME: ColorOS
-  ZIP_NAME: Realmeme
+  ROM_URL: https://dl.google.com/developers/android/sc/images/factory/redfin-spp3.210325.010-factory-3b4bc719.zip
+  ROM_NAME: pixel
+  ZIP_NAME: pixel 5
   TZ: Asia/Kolkata
   MIR: bit
 jobs:
