@@ -18,7 +18,7 @@ env:
   ROM_NAME: Pixel
   ZIP_NAME: Pixel 5
   TZ: Asia/Kolkata
-  MIR: bit
+  MIR: wet
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -53,17 +53,11 @@ jobs:
        
        - name: Download Stock Rom & Generate GSI
          run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME
-       
-       - name: Zip Aonly and upload 
+      
+       - name: Zip AB and upload 
          run: |
               mkdir final
               sudo chmod -R 777 ErfanGSIs/output
-              cd ErfanGSIs/output
-              zip -r $ZIP_NAME-GSI-Aonly.7z *-Aonly-*.img
-              curl -sL https://git.io/file-transfer | sh
-              ./transfer $MIR $ZIP_NAME-GSI-Aonly.7z          
-       - name: Zip AB and upload 
-         run: |
               cd ErfanGSIs/output
               zip -r $ZIP_NAME-GSI-AB.7z *-AB-*.img
               ./transfer $MIR $ZIP_NAME-GSI-AB.7z      
